@@ -1,0 +1,7 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  padding: 70px 135px 40px;
+}

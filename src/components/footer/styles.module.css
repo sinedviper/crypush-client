@@ -1,0 +1,118 @@
+.layout_footer {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 0;
+  width: 100%;
+  user-select: none;
+}
+
+.layout_footer::after,
+.layout_footer::before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: var(--gradient-blue-dark);
+}
+
+.layout_footer::after {
+  transform: translateY(50px);
+}
+
+.layout_footer::before {
+  transform: translateY(-50px);
+}
+
+.header_logo {
+  width: 220px;
+  height: 31px;
+  user-select: none;
+  pointer-events: none;
+}
+
+.header_logo path:nth-of-type(2),
+.header_logo path:nth-of-type(3),
+.header_logo path:nth-of-type(4),
+.header_logo path:nth-of-type(5),
+.header_logo path:nth-of-type(6),
+.header_logo path:nth-of-type(7),
+.header_logo path:nth-of-type(8),
+.header_logo path:nth-of-type(9) {
+  fill: var(--primary);
+}
+
+.footer_info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.info_main {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  max-width: 380px;
+}
+
+.info_main > p {
+  font-family: Pangram, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: var(--font20);
+  line-height: 160%;
+}
+
+.info_links {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  width: 100%;
+  gap: 10px;
+  justify-content: flex-start;
+}
+
+.info_links > p {
+  font-family: Pangram, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: var(--font30);
+  line-height: 160%;
+}
+
+.info_links > div {
+  display: flex;
+  gap: 45px;
+}
+
+.links_social {
+  border: none;
+  background: none;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.links_social > svg {
+  min-width: 40px;
+  height: 40px;
+}
+
+.footer_down {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0 0;
+}
+
+.footer_down > p {
+  font-family: Pangram, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  opacity: 0.4;
+}
+
+.footer_down > svg {
+  min-width: 70px;
+  height: 70px;
+}
