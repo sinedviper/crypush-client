@@ -1,6 +1,9 @@
 import { languageWords } from 'utils/types'
 
 export const uk: languageWords = {
+  main: {
+    scroll: 'Прокрутити вгору',
+  },
   header: {
     menu: {
       home: 'Головна',

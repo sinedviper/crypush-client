@@ -43,7 +43,7 @@ export const Header = (): JSX.Element => {
   }
 
   return (
-    <header className={styles.layout_header}>
+    <header id={'header'} className={styles.layout_header}>
       <h1>
         <SvgLogo className={styles.header_logo} />
       </h1>

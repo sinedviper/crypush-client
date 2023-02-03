@@ -8,3 +8,120 @@
   overflow-y: scroll;
   overflow-x: hidden;
 }
+
+.buttonUp {
+  position: fixed;
+  bottom: 150px;
+  right: 20px;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: var(--transition);
+}
+
+.buttonUp_active {
+  pointer-events: fill;
+  opacity: 1;
+  transition: var(--transition);
+}
+
+.buttonUp > p {
+  font-family: Pangram, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: var(--font17);
+  line-height: 19px;
+  color: var(--primary);
+  max-width: 100px;
+  user-select: none;
+  text-align: center;
+}
+
+.down_button {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 3px;
+  height: 50px;
+  width: 25px;
+  border-radius: var(--radius-big);
+  border: 1px solid transparent;
+  background-image:
+    linear-gradient(var(--secondary), var(--secondary)),
+    linear-gradient(0deg, #0c3483 -1.59%, #a2b6df 98.41%, #6b8cce 98.41%);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  position: relative;
+}
+
+.down_button::after {
+  content: "";
+  position: absolute;
+  display: block;
+  background: var(--primary);
+  bottom: 0;
+  width: 25px;
+  z-index: -1;
+  height: 50px;
+  opacity: 0;
+  left: 0;
+  border-radius: var(--radius-big);
+  transition: var(--transition);
+}
+
+.down_button:hover::after {
+  opacity: 1;
+  bottom: -5px;
+  left: -5px;
+  transition: var(--transition);
+}
+
+.down_button > span {
+  display: block;
+  border-radius: 50%;
+  background: linear-gradient(0deg, #0c3483 -1.59%, #a2b6df 98.41%, #6b8cce 98.41%);
+}
+
+.down_button > span:first-of-type {
+  margin-top: 5px;
+  width: 10px;
+  height: 10px;
+}
+
+.down_button > span:nth-of-type(2) {
+  width: 6px;
+  height: 6px;
+  animation: 2s linear 2s infinite spanmoving2;
+}
+
+.down_button > span:last-of-type {
+  width: 4px;
+  height: 4px;
+  animation: 2s linear 2s infinite spanmoving1;
+}
+
+@keyframes spanmoving1 {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes spanmoving2 {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}

@@ -1,6 +1,9 @@
 export type languageType = 'en' | 'ru' | 'uk'
 export type languageSelect = 'ENG' | 'RUS' | 'UKR'
 export interface languageWords {
+  main: {
+    scroll: string
+  }
   header: {
     menu: {
       home: string

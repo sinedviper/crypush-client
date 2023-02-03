@@ -1,6 +1,9 @@
 import { languageWords } from 'utils/types'
 
 export const ru: languageWords = {
+  main: {
+    scroll: 'Прокрутить вверх',
+  },
   header: {
     menu: {
       home: 'Главная',

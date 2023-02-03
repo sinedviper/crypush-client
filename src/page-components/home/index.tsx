@@ -29,7 +29,7 @@ import {
 } from 'assets/svg'
 import { Button, CardComments } from 'components'
 import { useLanguage, useSelector } from 'utils/hooks'
-import { getTheme } from 'utils/store/select'
+import { getScroll, getTheme } from 'utils/store/select'
 
 import styles from './styles.module.css'
 
@@ -41,8 +41,14 @@ export const Home = (): JSX.Element => {
   const [swiperActive, setSwiperActive] = useState(0)
 
   const swiperRef = useRef<SwiperCore>()
+  const refSection1 = useRef<HTMLDivElement>(null)
+  const refSection2 = useRef<HTMLDivElement>(null)
+  const refSection3 = useRef<HTMLDivElement>(null)
+  const refSection4 = useRef<HTMLDivElement>(null)
+  const refSection5 = useRef<HTMLDivElement>(null)
 
   const theme = useSelector(getTheme)
+  const scroll = useSelector(getScroll)
 
   const titleComment = 'Lorem ipsum'
   const paragraphComment =
@@ -63,9 +69,30 @@ export const Home = (): JSX.Element => {
     return swiper === number
   }
 
+  const activeScrollArrRef = (scr: number): boolean => {
+    // eslint-disable-next-line
+    const ref: any = [
+      refSection1.current?.clientHeight,
+      refSection2.current?.clientHeight,
+      refSection3.current?.clientHeight,
+      refSection4.current?.clientHeight,
+      refSection5.current?.clientHeight,
+    ]
+    let value = 0
+
+    for (let i = 1; i <= scr; i++) {
+      if (i === scr) {
+        value += ref[i] / 2
+      } else {
+        value += ref[i]
+      }
+    }
+    return scroll > value
+  }
+
   return (
     <>
-      <section className={styles.main_section1}>
+      <section ref={refSection1} className={styles.main_section1}>
         <section className={styles.section1_info}>
           <h2>{home.block1.title}</h2>
           <p>{home.block1.paragpraph}</p>
@@ -127,7 +154,13 @@ export const Home = (): JSX.Element => {
           </div>
         </div>
       </section>
-      <section className={styles.main_section2} id={'first'}>
+      <section
+        ref={refSection2}
+        className={cn(styles.main_section2, {
+          [styles.main_section2_active]: activeScrollArrRef(1),
+        })}
+        id={'first'}
+      >
         <h2>{home.block2.title}</h2>
         <p>{home.block2.paragraph}</p>
         <div className={styles.section2_info}>
@@ -217,7 +250,12 @@ export const Home = (): JSX.Element => {
           </div>
         </div>
       </section>
-      <section className={styles.main_section3}>
+      <section
+        ref={refSection3}
+        className={cn(styles.main_section3, {
+          [styles.main_section3_active]: activeScrollArrRef(2),
+        })}
+      >
         <section className={styles.section3_info1}>
           <div className={styles.info1_block}>
             <h2>{home.block3.info1.title}</h2>
@@ -243,7 +281,12 @@ export const Home = (): JSX.Element => {
         </section>
         <span></span>
       </section>
-      <section className={styles.main_section4}>
+      <section
+        ref={refSection4}
+        className={cn(styles.main_section4, {
+          [styles.main_section4_active]: activeScrollArrRef(3),
+        })}
+      >
         <span></span>
         <h2>{home.block4.title}</h2>
         <div>
@@ -286,7 +329,12 @@ export const Home = (): JSX.Element => {
           />
         </section>
       </section>
-      <section className={styles.main_section5}>
+      <section
+        ref={refSection5}
+        className={cn(styles.main_section5, {
+          [styles.main_section5_active]: activeScrollArrRef(4),
+        })}
+      >
         <div>
           <h2>{home.block5.title}</h2>
           <div>

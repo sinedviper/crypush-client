@@ -1,6 +1,9 @@
 import { languageWords } from 'utils/types'
 
 export const en: languageWords = {
+  main: {
+    scroll: 'Scroll Up',
+  },
   header: {
     menu: {
       home: 'Home',

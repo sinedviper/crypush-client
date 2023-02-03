@@ -153,6 +153,7 @@
     linear-gradient(0deg, #0c3483 -1.59%, #a2b6df 98.41%, #6b8cce 98.41%);
   background-origin: border-box;
   background-clip: content-box, border-box;
+  position: relative;
 }
 
 .down_button::after {
@@ -160,20 +161,20 @@
   position: absolute;
   display: block;
   background: var(--primary);
-  bottom: 1px;
+  bottom: 0;
   width: 100%;
   z-index: -1;
   height: 100%;
   opacity: 0;
-  left: 1px;
+  left: 0;
   border-radius: var(--radius-big);
   transition: var(--transition);
 }
 
 .down_button:hover::after {
   opacity: 1;
-  bottom: -3px;
-  left: -3px;
+  bottom: -5px;
+  left: -5px;
   transition: var(--transition);
 }
 
@@ -258,6 +259,13 @@
   flex-direction: column;
   gap: 50px;
   padding: 150px 0;
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.main_section2_active {
+  opacity: 1;
+  transition: var(--transition);
 }
 
 .main_section2 > h2 {
@@ -386,6 +394,13 @@
   padding: 100px 0;
   user-select: none;
   position: relative;
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.main_section3_active {
+  opacity: 1;
+  transition: var(--transition);
 }
 
 .main_section3 > span {
@@ -458,6 +473,13 @@
   position: relative;
   user-select: none;
   padding: 100px 0;
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.main_section4_active {
+  opacity: 1;
+  transition: var(--transition);
 }
 
 .main_section4 > span {
@@ -517,6 +539,13 @@
   padding-bottom: 70px;
   align-items: center;
   user-select: none;
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.main_section5_active {
+  opacity: 1;
+  transition: var(--transition);
 }
 
 .main_section5 > div {
