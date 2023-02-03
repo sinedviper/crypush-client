@@ -7,6 +7,7 @@
     url("Pangram-ExtraLight.eot?#iefix") format("embedded-opentype"),
     url("Pangram-ExtraLight.woff2") format("woff2"),
     url("Pangram-ExtraLight.woff") format("woff"),
+    url("Pangram-ExtraLight.otf") format("opentype"),
     url("Pangram-ExtraLight.ttf") format("truetype");
   font-weight: 200;
   font-style: normal;
@@ -21,6 +22,7 @@
     url("Pangram-Medium.eot?#iefix") format("embedded-opentype"),
     url("Pangram-Medium.woff2") format("woff2"),
     url("Pangram-Medium.woff") format("woff"),
+    url("Pangram-Medium.otf") format("opentype"),
     url("Pangram-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
@@ -35,6 +37,7 @@
     url("Pangram-Regular.eot?#iefix") format("embedded-opentype"),
     url("Pangram-Regular.woff2") format("woff2"),
     url("Pangram-Regular.woff") format("woff"),
+    url("Pangram-Regular.otf") format("opentype"),
     url("Pangram-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
@@ -49,6 +52,7 @@
     url("Pangram-Light.eot?#iefix") format("embedded-opentype"),
     url("Pangram-Light.woff2") format("woff2"),
     url("Pangram-Light.woff") format("woff"),
+    url("Pangram-Light.otf") format("opentype"),
     url("Pangram-Light.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
@@ -63,6 +67,7 @@
     url("Pangram-Bold.eot?#iefix") format("embedded-opentype"),
     url("Pangram-Bold.woff2") format("woff2"),
     url("Pangram-Bold.woff") format("woff"),
+    url("Pangram-Bold.otf") format("opentype"),
     url("Pangram-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
@@ -77,6 +82,7 @@
     url("Pangram-Black.eot?#iefix") format("embedded-opentype"),
     url("Pangram-Black.woff2") format("woff2"),
     url("Pangram-Black.woff") format("woff"),
+    url("Pangram-Black.otf") format("opentype"),
     url("Pangram-Black.ttf") format("truetype");
   font-weight: 900;
   font-style: normal;
@@ -91,6 +97,7 @@
     url("Pangram-ExtraBold.eot?#iefix") format("embedded-opentype"),
     url("Pangram-ExtraBold.woff2") format("woff2"),
     url("Pangram-ExtraBold.woff") format("woff"),
+    url("Pangram-ExtraBold.otf") format("opentype"),
     url("Pangram-ExtraBold.ttf") format("truetype");
   font-weight: 800;
   font-style: normal;

@@ -1,0 +1,31 @@
+.button {
+  border: 1px solid var(--primary);
+  background: none;
+  width: 275px;
+  height: 72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  border-radius: var(--radius-middle);
+  cursor: pointer;
+  font-family: Pangram, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: var(--font17);
+  line-height: 19px;
+  text-transform: capitalize;
+  color: var(--primary);
+  user-select: none;
+  transition: var(--transition-slow);
+}
+
+.button:hover {
+  transition: var(--transition-slow);
+  box-shadow: -5px 5px 0 0 var(--primary);
+}
+
+.button_active {
+  transition: var(--transition);
+  transform: scale(0.97);
+}

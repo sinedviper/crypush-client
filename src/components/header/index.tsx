@@ -3,15 +3,14 @@ import { NavLink, useLocation } from 'react-router-dom'
 import cn from 'classnames'
 
 import { SvgAccount, SvgGlobus, SvgLogo } from 'assets/svg'
-import { actionChangeLanguage } from 'utils/store/slice'
-import { getLanguage } from 'utils/store/select'
+import { actionChangeLanguage, actionChangeTheme } from 'utils/store/slice'
+import { getLanguage, getTheme } from 'utils/store/select'
 import { languageType, languageSelect } from 'utils/types'
 import { useDispatch, useSelector, useLanguage } from 'utils/hooks'
 
-import HeaderProps from './types.props'
 import styles from './styles.module.css'
 
-export const Header = ({ theme, setTheme }: HeaderProps): JSX.Element => {
+export const Header = (): JSX.Element => {
   const { pathname } = useLocation()
   const dispatch = useDispatch()
   const { header } = useLanguage()
@@ -19,6 +18,7 @@ export const Header = ({ theme, setTheme }: HeaderProps): JSX.Element => {
   const [select, setSelect] = useState(false)
 
   const language = useSelector(getLanguage)
+  const theme = useSelector(getTheme)
 
   const languageMain = (lang: languageType): languageSelect => {
     switch (lang) {
@@ -44,7 +44,9 @@ export const Header = ({ theme, setTheme }: HeaderProps): JSX.Element => {
 
   return (
     <header className={styles.layout_header}>
-      <SvgLogo className={styles.header_logo} />
+      <h1>
+        <SvgLogo className={styles.header_logo} />
+      </h1>
       <nav className={styles.header_nav}>
         <NavLink to={'/'} className={styles.nav_link}>
           {header.menu.home}
@@ -101,7 +103,7 @@ export const Header = ({ theme, setTheme }: HeaderProps): JSX.Element => {
             ))}
           </div>
         </div>
-        <button className={styles.nav_theme} onClick={() => setTheme(!theme)}>
+        <button className={styles.nav_theme} onClick={() => dispatch(actionChangeTheme(!theme))}>
           <span
             className={cn(styles.theme_circle, {
               [styles.theme_circle_active]: theme,

@@ -23,6 +23,11 @@
   user-select: none;
 }
 
+.layout_header > h1 {
+  display: flex;
+  align-items: center;
+}
+
 .header_nav {
   display: flex;
   gap: 70px;
@@ -124,7 +129,7 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  border-radius: 0 0 var(--radisu-middle) var(--radisu-middle);
+  border-radius: 0 0 var(--radius-middle) var(--radius-middle);
   backdrop-filter: blur(60px);
   background: var(--gradient1);
   transition: var(--transition);
@@ -162,7 +167,7 @@
   width: 45px;
   height: 20px;
   border: 1px solid var(--primary);
-  border-radius: var(--radisu-small);
+  border-radius: var(--radius-small);
   background: transparent;
   cursor: pointer;
   outline: none;

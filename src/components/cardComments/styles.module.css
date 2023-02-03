@@ -1,0 +1,174 @@
+.section4_comments {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 20px;
+  height: 300px;
+  min-width: 350px;
+  border-radius: var(--radius-small);
+  transition: var(--transition);
+  filter: drop-shadow(0 4px 30px rgb(0 0 0 / 0%));
+  border: 1px solid transparent;
+  background-image:
+    linear-gradient(0deg, #ecf0f8 100%, #ecf0f8 100%),
+    linear-gradient(0deg, #0c3483 0%, #a2b6df 100%, #6b8cce 100%);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.section_comments_theme {
+  filter: drop-shadow(0 4px 30px rgb(0 0 0 / 0%));
+  border: 1px solid transparent;
+  background-image:
+    linear-gradient(var(--secondary), var(--secondary)),
+    linear-gradient(0deg, #0c3483 -1.59%, #a2b6df 98.41%, #6b8cce 98.41%);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  overflow: hidden;
+}
+
+.section_comments_theme::after {
+  transition: var(--transition);
+  position: absolute;
+  top: 20px;
+  left: -200px;
+  content: "";
+  border-radius: 50%;
+  width: 520px;
+  height: 220px;
+  background: linear-gradient(112.85deg, #0c3483 25.47%, #a2b6df 90.88%, #6b8cce 90.88%);
+  filter: blur(37.384px);
+  transform: matrix(-0.98, -0.2, 0.2, -0.98, 0, 0);
+  z-index: -1;
+}
+
+.section4_comments > div {
+  margin-top: 25px;
+  margin-left: 25px;
+}
+
+.section4_comments > div > h3 {
+  font-family: "Gosha Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: var(--font25);
+  line-height: 160%;
+  text-transform: capitalize;
+  color: var(--primary);
+  transition: var(--transition);
+}
+
+.section4_comments > div > div {
+  display: flex;
+  gap: 5px;
+}
+
+.section4_comments > div > div > svg > path {
+  width: 10px;
+  height: 10px;
+  fill: var(--primary);
+  transition: var(--transition);
+}
+
+.section4_comments > p {
+  max-width: 500px;
+  margin-left: 25px;
+  font-family: Pangram, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: var(--font15);
+  line-height: 160%;
+  color: var(--primary);
+  opacity: 0.8;
+  transition: var(--transition);
+}
+
+.section4_comments > button {
+  width: min-content;
+  white-space: nowrap;
+  margin-left: 25px;
+  font-family: Pangram, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: var(--font15);
+  line-height: 14px;
+  text-transform: capitalize;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: var(--primary);
+  transition: var(--transition);
+  position: relative;
+}
+
+.section4_comments > button::after,
+.section4_comments > button::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100px;
+  height: 2px;
+  transition: var(--transition);
+  background: var(--gradient-blue-dark);
+}
+
+.section4_comments > button::before {
+  width: 0;
+}
+
+.section4_comments > button:hover::before {
+  width: 100px;
+  background: var(--primary);
+}
+
+.section4_comments_active {
+  min-width: 830px;
+  height: 320px;
+  transition: var(--transition-slow);
+}
+
+.section4_comments_active::after {
+  width: 800px;
+  height: 350px;
+  top: -50px;
+  left: -100px;
+}
+
+.section4_comments_active > div > h3 {
+  transition: var(--transition-slow);
+  font-size: var(--font30);
+}
+
+.section4_comments_active > div > div > svg > path {
+  width: 14px;
+  height: 14px;
+  transition: var(--transition-slow);
+}
+
+.section4_comments_active > p {
+  max-width: 760px;
+  margin-bottom: 40px;
+  font-size: var(--font20);
+  transition: var(--transition-slow);
+}
+
+.section4_comments_active > button {
+  font-size: var(--font17);
+  transition: var(--transition-slow);
+}
+
+.section4_comments_active > button::before {
+  bottom: -7px;
+  height: 3px;
+}
+
+.section4_comments_active > button::after,
+.section4_comments_active > button:hover::before {
+  bottom: -7px;
+  width: 110px;
+  transition: var(--transition-slow);
+  height: 3px;
+}

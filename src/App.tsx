@@ -3,7 +3,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 import { Provider } from 'react-redux'
 
-import { Layout } from 'page-components/layout'
+import { Layout, Home } from 'page-components'
 import { store } from 'utils/store'
 
 const router = createBrowserRouter([
@@ -13,7 +13,7 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <div></div>,
+        element: <Home />,
       },
     ],
   },
