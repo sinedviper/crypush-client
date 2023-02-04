@@ -65,6 +65,17 @@ export const Home = (): JSX.Element => {
     }
   }
 
+  const positionGradientReverse = (position: number, value: number): number => {
+    const initDeg = value / 2
+    const posState = initDeg * 0.1
+
+    if (position >= initDeg) {
+      return (position - posState) * 0.05
+    } else {
+      return (position + posState) * 0.05
+    }
+  }
+
   const activeSwiper = (number: number, swiper: number): boolean => {
     return swiper === number
   }
@@ -130,7 +141,14 @@ export const Home = (): JSX.Element => {
               left: positionGradient(phonesPosition[0], 756),
             }}
           ></span>
-          <img src={PngPhones} alt={'phones'} />
+          <img
+            style={{
+              top: positionGradientReverse(phonesPosition[1], 850),
+              right: positionGradientReverse(phonesPosition[0], 756),
+            }}
+            src={PngPhones}
+            alt={'phones'}
+          />
         </section>
         <div className={styles.section1_bitcoin}>
           <div>
