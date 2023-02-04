@@ -19,7 +19,7 @@
   /* -------- TRANSITION -------- */
   --transition: all 230ms;
   --transition-fast: all 150ms;
-  --transition-slow: all 350ms;
+  --transition-slow: all 400ms;
 
   /* -------- BORDER RADIUS -------- */
   --radius-big: 100px;

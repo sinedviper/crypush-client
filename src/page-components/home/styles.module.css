@@ -265,12 +265,12 @@
   gap: 50px;
   padding: 150px 0;
   opacity: 0;
-  transition: var(--transition);
+  transition: var(--transition-slow);
 }
 
 .main_section2_active {
   opacity: 1;
-  transition: var(--transition);
+  transition: var(--transition-slow);
 }
 
 .main_section2 > h2 {
@@ -400,12 +400,12 @@
   user-select: none;
   position: relative;
   opacity: 0;
-  transition: var(--transition);
+  transition: var(--transition-slow);
 }
 
 .main_section3_active {
   opacity: 1;
-  transition: var(--transition);
+  transition: var(--transition-slow);
 }
 
 .main_section3 > span {
@@ -479,12 +479,12 @@
   user-select: none;
   padding: 100px 0;
   opacity: 0;
-  transition: var(--transition);
+  transition: var(--transition-slow);
 }
 
 .main_section4_active {
   opacity: 1;
-  transition: var(--transition);
+  transition: var(--transition-slow);
 }
 
 .main_section4 > span {
@@ -545,12 +545,12 @@
   align-items: center;
   user-select: none;
   opacity: 0;
-  transition: var(--transition);
+  transition: var(--transition-slow);
 }
 
 .main_section5_active {
   opacity: 1;
-  transition: var(--transition);
+  transition: var(--transition-slow);
 }
 
 .main_section5 > div {

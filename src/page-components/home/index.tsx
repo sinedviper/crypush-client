@@ -108,7 +108,7 @@ export const Home = (): JSX.Element => {
           <h2>{home.block1.title}</h2>
           <p>{home.block1.paragpraph}</p>
           <div>
-            <Button theme={'color'}>
+            <Button theme={'color'} animation={'slow'}>
               {home.block1.button.first}
               <SvgArrow />
             </Button>
@@ -278,7 +278,7 @@ export const Home = (): JSX.Element => {
           <div className={styles.info1_block}>
             <h2>{home.block3.info1.title}</h2>
             <p>{home.block3.info1.paragraph}</p>
-            <Button theme={'color'}>
+            <Button theme={'color'} animation={'slow'}>
               {home.block3.info1.button}
               <SvgArrow />
             </Button>
@@ -288,7 +288,9 @@ export const Home = (): JSX.Element => {
             <p>{home.block3.info2.paragraph}</p>
             <div>
               <Button>{home.block3.info2.button.first}</Button>
-              <Button theme={'color'}>{home.block3.info2.button.second}</Button>
+              <Button theme={'color'} animation={'slow'}>
+                {home.block3.info2.button.second}
+              </Button>
             </div>
           </div>
         </section>
@@ -356,7 +358,7 @@ export const Home = (): JSX.Element => {
         <div>
           <h2>{home.block5.title}</h2>
           <div>
-            <Button theme={'color'}>
+            <Button theme={'color'} animation={'slow'}>
               {home.block5.button.first}
               <SvgArrow />
             </Button>

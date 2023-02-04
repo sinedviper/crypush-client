@@ -18,6 +18,8 @@
   color: var(--primary);
   user-select: none;
   transition: var(--transition-slow);
+  overflow: hidden;
+  position: relative;
 }
 
 .button:hover {
@@ -25,7 +27,61 @@
   box-shadow: -5px 5px 0 0 var(--primary);
 }
 
+.button_theme {
+  border: none;
+  background: var(--gradient-blue-light);
+  color: var(--light);
+}
+
 .button_active {
   transition: var(--transition);
   transform: scale(0.97);
+}
+
+.button_animation::after,
+.button_animation::before {
+  content: "";
+  position: absolute;
+  width: 200px;
+  transition: var(--transition-slow);
+  background: var(--primary);
+  transform: rotate(45deg);
+}
+
+.button_animation::after {
+  height: 20px;
+  right: -230px;
+}
+
+.button_animation::before {
+  height: 10px;
+  right: -130px;
+}
+
+.button_animation:hover > svg > path {
+  animation: linear 2s infinite svg;
+}
+
+@keyframes svg {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(4px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.button_animation:hover::after {
+  transition: var(--transition-slow);
+  right: 220px;
+}
+
+.button_animation:hover::before {
+  transition: var(--transition-slow);
+  right: 320px;
 }
